@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Quote</title>
+  </head>
+  <body>
+    <h1>New quote</h1>
+    <form action="/quotes/new" method="POST">
+      <label for="quote">Quote:</label>
+      <input type="text" name="quote" id="quote" />
+
+      <label for="isItMotivational">Is It Motivational?</label>
+      <input type="checkbox" name="isItMotivational" id="isItMotivational" />
+
+      <label for="quotee">Quotee:</label>
+      <input type="text" name="quotee" id="quotee" />
+
+      <button type="submit">Add Quote</button>
+    </form>
+  </body>
+</html>

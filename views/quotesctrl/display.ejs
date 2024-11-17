@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= quote.quote %></title>
+  </head>
+  <style>
+    p{
+      font-family:'Courier New', Courier, monospace
+    }
+
+    .quotee{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+    }
+  </style>
+  <body>
+    <h1><%= quote.quote %></h1>
+    <p class="quotee"
+    >
+      Quotee: <%= quote.quotee %>
+    </p>
+    <p><% if(quote.isItMotivational){ %>
+<p>This Quote is Motivational</p>
+      <%  } else{ %>
+<p>This Quote is not Motivational</p>
+        <% } %></p>
+
+        <form action="/quotes/<%=quote._id%>?_method=DELETE" method="POST">
+          <button type="submit">Delete Quote</button>
+        </form>
+        <a href="/quotes/<%= quote._id %>/edit">Edit Quote</a>
+        <a href="/quotes">Back to Quotes</a>
+  </body>
+</html>

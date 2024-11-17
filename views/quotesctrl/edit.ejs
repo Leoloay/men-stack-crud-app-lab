@@ -1,0 +1,18 @@
+<body>
+  <h1>Edit <%= quote.quote %></h1>
+  <form action="/quotes/<%=quote._id%>?_method=PUT" method="POST">
+    <label for="quote">Quote:</label>
+    <input
+      type="text"
+      name="quote"
+      placeholder="<%= quote.quote %>"
+      value="<%= quote.quote %>"
+    />
+
+    <label for="isItMotivational">Is it Motivational?</label>
+    <input type="checkbox" name="isItMotivational" id="isItMotivational" />
+
+    <button type="submit">Update Quote</button>
+  </form>
+  <a href="/quotes">Back to Quote</a>
+</body>

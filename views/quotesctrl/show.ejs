@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Quotes</title>
+  </head>
+  <body>
+    <h1>All Quotes</h1>
+    <ul>
+      <ul>
+        <% quotes.forEach(quote => { %>
+        <li>
+          <a href="/quotes/<%= quote._id %>"><%= quote.quote %></a>
+        </li>
+        <% }); %>
+      </ul>
+  </body>
+</html>
