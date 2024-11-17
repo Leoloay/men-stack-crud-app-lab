@@ -18,7 +18,7 @@ app.use(methodOverride("_method"))
 app.use(morgan("dev"))
 
 app.get("/", async (req, res) => {
-  res.render("index.ejs")
+  await res.render("index.ejs")
 })
 
 app.get("/quotes", async (req, res) => {
